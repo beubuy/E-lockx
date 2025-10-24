@@ -1,0 +1,421 @@
+/* contact.css */
+/* --- Header --- */
+.main-header {
+    background-color: var(--bg-white);
+    padding: var(--spacing-sm) 0;
+    box-shadow: 0 2px 10px var(--shadow-light);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+
+/* Contact Hero Section */
+.contact-hero {
+    background: linear-gradient(135deg, var(--sky-blue-light), var(--mint-green-light)); /* Soft pastel gradient */
+    padding: 80px 0;
+    text-align: center;
+    color: var(--charcoal-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.contact-hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.2em;
+    color: var(--charcoal-grey);
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.contact-hero h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    color: var(--medium-grey);
+    font-weight: 400;
+    max-width: 700px;
+}
+
+.contact-hero .hero-illustration {
+    width: 100%;
+    max-width: 400px;
+    height: 250px; /* Placeholder for image */
+    background-color: var(--blush-pink-light); /* Visual placeholder */
+    border-radius: 15px;
+    margin-top: 30px;
+    box-shadow: var(--soft-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 60px 0;
+    background-color: var(--soft-white);
+}
+
+.contact-form-section .container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-card {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--soft-shadow);
+    max-width: 600px;
+    width: 100%;
+}
+
+.form-card h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--charcoal-grey);
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    color: var(--charcoal-grey);
+    margin-bottom: 8px;
+    font-size: 1.05em;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid var(--light-grey-border);
+    border-radius: 8px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1em;
+    color: var(--charcoal-grey);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: var(--mint-green);
+    box-shadow: 0 0 0 3px rgba(var(--mint-green-rgb), 0.2);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.privacy-agree {
+    display: flex;
+    align-items: center;
+    margin-top: -10px; /* Adjust spacing */
+    margin-bottom: 25px;
+}
+
+.privacy-agree input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: var(--mint-green);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.privacy-agree label {
+    margin-bottom: 0;
+    font-size: 0.95em;
+    font-weight: 400;
+}
+
+.privacy-agree a {
+    color: var(--sky-blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.privacy-agree a:hover {
+    text-decoration: underline;
+}
+
+.contact-form .btn-primary {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    font-weight: 700;
+    background-color: var(--mint-green);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(var(--mint-green-rgb), 0.2);
+}
+
+.contact-form .btn-primary:hover {
+    background-color: var(--mint-green-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(var(--mint-green-rgb), 0.3);
+}
+
+.form-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Nunito Sans', sans-serif;
+    text-align: center;
+    font-weight: 600;
+}
+
+.form-message.success {
+    background-color: rgba(var(--mint-green-rgb), 0.1);
+    color: var(--mint-green-dark);
+    border: 1px solid var(--mint-green);
+}
+
+.form-message.error {
+    background-color: rgba(var(--blush-pink-rgb), 0.1);
+    color: var(--blush-pink-dark);
+    border: 1px solid var(--blush-pink);
+}
+
+/* Contact Info Section */
+.contact-info-section {
+    background-color: var(--tertiary-accent-light); /* Using a lighter sky blue for background */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-info-section h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--charcoal-grey);
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.info-item {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--soft-shadow);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+}
+
+.info-item .icon {
+    font-size: 3em;
+    color: var(--sky-blue);
+    margin-bottom: 20px;
+}
+
+.info-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--charcoal-grey);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.info-item p, .info-item a {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.1em;
+    color: var(--medium-grey);
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.info-item a {
+    color: var(--sky-blue);
+    font-weight: 600;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    font-size: 1.8em;
+    color: var(--medium-grey);
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--sky-blue);
+}
+
+/* Join Mission Section */
+.join-mission-section {
+    background-color: var(--blush-pink-light); /* Soft blush for distinction */
+    padding: 60px 0;
+    text-align: center;
+    color: var(--charcoal-grey);
+}
+
+.join-mission-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.join-mission-section p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+    color: var(--medium-grey);
+}
+
+.join-mission-section .btn-secondary {
+    background-color: var(--blush-pink);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(var(--blush-pink-rgb), 0.2);
+}
+
+.join-mission-section .btn-secondary:hover {
+    background-color: var(--blush-pink-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(var(--blush-pink-rgb), 0.3);
+}
+
+/* Location Map Section */
+.location-map {
+    padding: 60px 0;
+    background-color: var(--soft-white);
+    text-align: center;
+}
+
+.location-map h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--charcoal-grey);
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.location-map .map-placeholder {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    background-color: var(--tertiary-accent-light); /* Soft pastel map background */
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: var(--soft-shadow);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--charcoal-grey);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.2em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-hero h1 {
+        font-size: 2.5em;
+    }
+    .contact-hero h2 {
+        font-size: 1.2em;
+    }
+    .form-card {
+        padding: 30px 20px;
+    }
+    .contact-form-section .container,
+    .contact-info-section .info-grid {
+        padding: 0 20px;
+    }
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-info-section h2,
+    .location-map h2 {
+        font-size: 2em;
+    }
+    .location-map .map-placeholder {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero h1 {
+        font-size: 2em;
+    }
+    .contact-hero h2 {
+        font-size: 1em;
+    }
+    .form-card h2 {
+        font-size: 1.8em;
+    }
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        padding: 12px 15px;
+        font-size: 0.95em;
+    }
+    .info-item h3 {
+        font-size: 1.3em;
+    }
+    .info-item p, .info-item a {
+        font-size: 1em;
+    }
+    .social-links a {
+        font-size: 1.5em;
+    }
+}
