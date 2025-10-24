@@ -1,0 +1,378 @@
+/* Interactive Zone Specific Styles */
+/* --- Header --- */
+.main-header {
+    background-color: var(--bg-white);
+    padding: var(--spacing-sm) 0;
+    box-shadow: 0 2px 10px var(--shadow-light);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+
+.interactive-hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.interactive-hero h1 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--charcoal-grey);
+    font-size: 3em;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.interactive-hero h2 {
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--medium-grey);
+    font-size: 1.3em;
+    font-weight: 400;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+.interactive-hero .hero-illustration {
+    width: 100%;
+    max-width: 600px;
+    height: 350px; /* Placeholder for image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px; /* Rounded corners for the image container */
+    overflow: hidden;
+    box-shadow: var(--soft-shadow);
+}
+
+/* Password Strength Meter */
+.password-meter {
+    text-align: center;
+}
+
+.password-meter-card {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--soft-white);
+    border-radius: 15px;
+    box-shadow: var(--soft-shadow);
+}
+
+.password-meter-card input[type="text"] {
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-family: 'Nunito Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.strength-indicator {
+    width: 100%;
+    background-color: #eee;
+    border-radius: 8px;
+    height: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #ff5e5e; /* Default weak color */
+    border-radius: 8px;
+    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.strength-bar.weak { background-color: #ff5e5e; } /* Blush Pink */
+.strength-bar.medium { background-color: #f7b267; } /* Orange-ish */
+.strength-bar.strong { background-color: var(--mint-green); }
+.strength-bar.excellent { background-color: var(--sky-blue); }
+
+.strength-feedback {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    color: var(--charcoal-grey);
+    margin-bottom: 10px;
+    min-height: 1.5em; /* Prevent layout shift */
+}
+
+/* Phishing Game */
+.phishing-game {
+    text-align: center;
+}
+
+.phishing-game-card {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--soft-white);
+    border-radius: 15px;
+    box-shadow: var(--soft-shadow);
+}
+
+.phishing-game-card .game-intro {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    color: var(--medium-grey);
+}
+
+.email-scenario {
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.email-scenario .email-image {
+    width: 100%;
+    height: 200px; /* Placeholder for image */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.email-scenario .scenario-text {
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--charcoal-grey);
+    line-height: 1.6;
+}
+
+.email-scenario .suspicious-link {
+    color: var(--blush-pink); /* Highlight suspicious links */
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.phishing-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.phishing-feedback {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+    min-height: 1.5em; /* Prevent layout shift */
+}
+
+.phishing-feedback.correct { color: var(--mint-green); }
+.phishing-feedback.incorrect { color: var(--blush-pink); }
+
+/* Cyber Bingo */
+.cyber-bingo {
+    text-align: center;
+}
+
+.bingo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+}
+
+.bingo-square {
+    padding: 25px;
+    min-height: 120px;
+    background-color: var(--soft-white);
+    border-radius: 12px;
+    box-shadow: var(--soft-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--charcoal-grey);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.bingo-square:hover:not(.selected) {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.bingo-square.selected {
+    background-color: var(--mint-green);
+    color: var(--soft-white);
+    transform: scale(0.98);
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.bingo-square.selected::after {
+    content: '\f00c'; /* Font Awesome check icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.bingo-results {
+    margin-top: 20px;
+}
+
+.score-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.4em;
+    color: var(--charcoal-grey);
+    margin-bottom: 10px;
+}
+
+.bingo-message {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.1em;
+    color: var(--medium-grey);
+    min-height: 1.5em;
+}
+
+/* Learning Progress */
+.learning-progress {
+    text-align: center;
+}
+
+.progress-bar-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--soft-white);
+    border-radius: 15px;
+    box-shadow: var(--soft-shadow);
+    overflow: hidden;
+    position: relative;
+    height: 120px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--sky-blue), var(--mint-green));
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.progress-bar-container .progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: var(--mint-green);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: width 0.5s ease-out;
+}
+
+.progress-bar-container .progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.3em;
+    color: var(--charcoal-grey);
+    z-index: 2;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 15px;
+    border-radius: 8px;
+    box-shadow: var(--soft-shadow);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .interactive-hero h1 {
+        font-size: 2.5em;
+    }
+    .interactive-hero h2 {
+        font-size: 1.1em;
+    }
+    .hero-illustration {
+        height: 250px;
+    }
+
+    .phishing-controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .bingo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .bingo-square {
+        min-height: 100px;
+        font-size: 0.9em;
+        padding: 15px;
+    }
+
+    .progress-bar-container {
+        height: 100px;
+        padding: 20px;
+    }
+    .progress-bar-container .progress-text {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .interactive-hero h1 {
+        font-size: 2em;
+    }
+    .interactive-hero h2 {
+        font-size: 0.9em;
+    }
+    .hero-illustration {
+        height: 200px;
+    }
+    .password-meter-card, .phishing-game-card, .progress-bar-container {
+        padding: 20px;
+    }
+    .bingo-grid {
+        grid-template-columns: 1fr;
+    }
+    .bingo-square {
+        min-height: 80px;
+    }
+    .score-text {
+        font-size: 1.2em;
+    }
+}

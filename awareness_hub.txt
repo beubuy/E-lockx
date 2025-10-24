@@ -1,0 +1,665 @@
+/* awareness_hub.css - Specific styles for the Awareness Hub page */
+/* --- Header --- */
+.main-header {
+    background-color: var(--bg-white);
+    padding: var(--spacing-sm) 0;
+    box-shadow: 0 2px 10px var(--shadow-light);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+
+/* Hero Section */
+.awareness-hero {
+    background: linear-gradient(135deg, var(--mint-green-light), var(--sky-blue-light)); /* Soft pastel gradient */
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px; /* Ensure sufficient height */
+}
+
+.awareness-hero .container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.awareness-hero .hero-content {
+    flex: 2;
+    min-width: 300px; /* Minimum width before wrapping */
+    color: var(--charcoal-grey);
+}
+
+.awareness-hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.2em;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    color: var(--charcoal-grey);
+}
+
+.awareness-hero h2 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: var(--medium-grey);
+}
+
+.awareness-hero .btn-secondary {
+    background-color: var(--blush-pink);
+    color: var(--white);
+    border: 2px solid var(--blush-pink);
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.awareness-hero .btn-secondary:hover {
+    background-color: transparent;
+    color: var(--blush-pink);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.awareness-hero .hero-illustration {
+    flex: 1;
+    min-width: 250px;
+    text-align: right;
+}
+
+.awareness-hero .hero-illustration img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Subtopics Overview */
+.subtopics {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.subtopics h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5em;
+    color: var(--charcoal-grey);
+}
+
+.subtopic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.subtopic-card {
+    background-color: #F8F8F8; /* Lighter background for cards */
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--charcoal-grey);
+    box-shadow: var(--soft-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.subtopic-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.subtopic-card .icon-large {
+    font-size: 3em;
+    color: var(--mint-green);
+    margin-bottom: 15px;
+}
+
+.subtopic-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--charcoal-grey);
+}
+
+.subtopic-card p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1em;
+    color: var(--medium-grey);
+}
+
+/* Detailed Subtopic Sections */
+.topic-section {
+    padding: 80px 0;
+    border-bottom: 1px solid #eee;
+    background-color: var(--white);
+}
+
+.topic-section:nth-of-type(odd) {
+    background-color: #fcfcfc; /* Slightly different background for alternating sections */
+}
+
+.topic-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2em;
+    color: var(--charcoal-grey);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.topic-section .topic-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.topic-section .topic-content.reverse-layout {
+    flex-direction: row-reverse;
+}
+
+.topic-section .topic-text {
+    flex: 2;
+    min-width: 300px;
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 1.7;
+    color: var(--charcoal-grey);
+}
+
+.topic-section .topic-text p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.topic-section .topic-text ul {
+    list-style: none; /* Remove default list style */
+    padding-left: 0;
+}
+
+.topic-section .topic-text ul li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.topic-section .topic-text ul li::before {
+    content: "\f058"; /* Font Awesome check-circle icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--mint-green);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em;
+}
+
+.topic-section .topic-illustration {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.topic-section .topic-illustration img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: var(--soft-shadow);
+}
+
+/* Myth vs Fact Slider */
+.myth-fact {
+    padding: 80px 0;
+    background-color: var(--tertiary-accent-light); /* Lighter sky blue */
+}
+
+.myth-fact h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5em;
+    color: var(--charcoal-grey);
+}
+
+.myth-fact .slider-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 50px; /* Space for buttons */
+}
+
+.myth-fact .slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.myth-fact .slider-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.myth-fact .myth-card {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--soft-shadow);
+    text-align: center;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 6px solid var(--blush-pink); /* Stronger indicator */
+}
+
+.myth-fact .myth-card p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.2em;
+    color: var(--charcoal-grey);
+    margin: 15px 0;
+}
+
+.myth-fact .myth-card .label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.myth-fact .myth-card .myth-label {
+    background-color: var(--blush-pink);
+    color: var(--white);
+}
+
+.myth-fact .myth-card .fact-label {
+    background-color: var(--mint-green);
+    color: var(--white);
+    margin-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 10px;
+}
+
+.myth-fact .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 15px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: var(--charcoal-grey);
+    box-shadow: var(--soft-shadow);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 10;
+}
+
+.myth-fact .slider-btn:hover {
+    background-color: var(--mint-green);
+    color: var(--white);
+}
+
+.myth-fact .slider-btn.prev-btn {
+    left: 0;
+}
+
+.myth-fact .slider-btn.next-btn {
+    right: 0;
+}
+
+.myth-fact .slider-dots {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.myth-fact .slider-dots .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: var(--medium-grey);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.myth-fact .slider-dots .dot.active {
+    background-color: var(--mint-green);
+    transform: scale(1.2);
+}
+
+/* Do's & Don'ts Carousel */
+.dos-donts {
+    padding: 80px 0;
+    background-color: #fcfcfc;
+}
+
+.dos-donts h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5em;
+    color: var(--charcoal-grey);
+}
+
+.dos-donts .slider-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 50px;
+}
+
+.dos-donts .dos-donts-slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.dos-donts .dos-donts-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of do/don't cards on smaller screens */
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.dos-donts .do-card,
+.dos-donts .dont-card {
+    flex: 1; /* Allow cards to take up equal space */
+    min-width: 300px; /* Minimum width before stacking */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--soft-shadow);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dos-donts .do-card {
+    background-color: var(--mint-green-light);
+    border-left: 6px solid var(--mint-green);
+    color: var(--charcoal-grey);
+}
+
+.dos-donts .dont-card {
+    background-color: var(--blush-pink-light);
+    border-left: 6px solid var(--blush-pink);
+    color: var(--charcoal-grey);
+}
+
+.dos-donts .do-icon,
+.dos-donts .dont-icon {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.dos-donts .do-icon {
+    color: var(--mint-green);
+}
+
+.dos-donts .dont-icon {
+    color: var(--blush-pink);
+}
+
+.dos-donts .do-card h3,
+.dos-donts .dont-card h3 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.dos-donts .dos-donts-slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 15px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: var(--charcoal-grey);
+    box-shadow: var(--soft-shadow);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 10;
+}
+
+.dos-donts .dos-donts-slider-btn:hover {
+    background-color: var(--sky-blue);
+    color: var(--white);
+}
+
+.dos-donts .dos-donts-slider-btn.prev-btn {
+    left: 0;
+}
+
+.dos-donts .dos-donts-slider-btn.next-btn {
+    right: 0;
+}
+
+.dos-donts .dos-donts-slider-dots {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.dos-donts .dos-donts-slider-dots .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: var(--medium-grey);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.dos-donts .dos-donts-slider-dots .dot.active {
+    background-color: var(--sky-blue);
+    transform: scale(1.2);
+}
+
+/* Case Studies */
+.case-studies {
+    padding: 80px 0;
+    background-color: var(--mint-green-light); /* Another soft pastel background */
+}
+
+.case-studies h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5em;
+    color: var(--charcoal-grey);
+}
+
+.case-study-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.case-study-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--soft-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.case-study-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.case-study-card .case-icon {
+    font-size: 2.5em;
+    color: var(--sky-blue);
+    margin-bottom: 20px;
+}
+
+.case-study-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    color: var(--charcoal-grey);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.case-study-card p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1em;
+    color: var(--medium-grey);
+    margin-bottom: 20px;
+    flex-grow: 1; /* Allows text to take up available space */
+}
+
+.case-study-card .read-more-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--blush-pink);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.case-study-card .read-more-link:hover {
+    color: var(--charcoal-grey);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .awareness-hero h1 {
+        font-size: 2.8em;
+    }
+    .awareness-hero h2 {
+        font-size: 1.3em;
+    }
+    .topic-section h3 {
+        font-size: 1.8em;
+    }
+    .myth-fact .myth-card,
+    .dos-donts .do-card,
+    .dos-donts .dont-card {
+        padding: 30px;
+    }
+    .myth-fact .slider-container,
+    .dos-donts .slider-container {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .awareness-hero .container {
+        flex-direction: column-reverse; /* Illustration on top on mobile */
+        text-align: center;
+    }
+    .awareness-hero .hero-illustration {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .awareness-hero h1 {
+        font-size: 2.5em;
+    }
+    .awareness-hero h2 {
+        font-size: 1.1em;
+    }
+    .subtopic-grid {
+        grid-template-columns: 1fr;
+    }
+    .topic-section .topic-content,
+    .topic-section .topic-content.reverse-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+    .topic-section .topic-text ul {
+        padding-left: 20px; /* Adjust for smaller screens */
+        text-align: left;
+    }
+    .topic-section .topic-illustration {
+        margin-top: 30px;
+    }
+    .topic-section h3 {
+        font-size: 1.6em;
+    }
+    .myth-fact h2, .dos-donts h2, .case-studies h2 {
+        font-size: 2em;
+    }
+    .myth-fact .slider-btn, .dos-donts .dos-donts-slider-btn {
+        padding: 10px 12px;
+        font-size: 1em;
+    }
+    .myth-fact .slider-btn.prev-btn, .dos-donts .dos-donts-slider-btn.prev-btn {
+        left: 5px;
+    }
+    .myth-fact .slider-btn.next-btn, .dos-donts .dos-donts-slider-btn.next-btn {
+        right: 5px;
+    }
+    .dos-donts .dos-donts-item {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .awareness-hero h1 {
+        font-size: 2em;
+    }
+    .awareness-hero h2 {
+        font-size: 1em;
+    }
+    .subtopic-card {
+        padding: 20px;
+    }
+    .subtopic-card h3 {
+        font-size: 1.3em;
+    }
+    .topic-section h3 {
+        font-size: 1.4em;
+    }
+    .topic-section .topic-text p,
+    .topic-section .topic-text ul li {
+        font-size: 0.95em;
+    }
+    .myth-fact .myth-card p {
+        font-size: 1.1em;
+    }
+    .dos-donts .do-card h3,
+    .dos-donts .dont-card h3 {
+        font-size: 1.1em;
+    }
+}

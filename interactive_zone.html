@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Zone - LockX</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/interactive_zone.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Nunito+Sans:wght@300;400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script> <!-- Replace with your Font Awesome Kit -->
+</head>
+<body>
+      <!-- Header (Consistent Across Pages) -->
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <!-- Placeholder for LockX Logo (e.g., SVG or image) -->
+                    <img src="assets/images/lockx-logo-placeholder.png" alt="LockX Logo">
+                    <h1>LockX</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="social_media_safety.html">Social Media Safety</a></li>
+                    <li><a href="awareness_hub.html">Awareness Hub</a></li>
+                    <li><a href="interactive_zone.html">Interactive Zone</a></li>
+                    <li><a href="resources_support.html">Resources & Support</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="interactive_zone.html" class="btn btn-primary nav-cta">Take the Pledge</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero interactive-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Interactive Zone: Learn by Doing!</h1>
+                    <h2>Test your knowledge, hone your skills, and master digital safety through engaging challenges.</h2>
+                    <div class="hero-illustration">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="password-meter section-spacing">
+            <div class="container">
+                <h2>Test Your Password Strength</h2>
+                <div class="password-meter-card card">
+                    <input type="text" id="password-input" placeholder="Type your password here">
+                    <div class="strength-indicator">
+                        <div id="strength-bar" class="strength-bar"></div>
+                    </div>
+                    <p id="strength-text" class="strength-feedback"></p>
+                    <small>Suggestions: Use a mix of uppercase, lowercase, numbers, and symbols. Aim for at least 12 characters.</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="phishing-game section-spacing bg-light-pastel">
+            <div class="container">
+                <h2>Can You Spot the Phish?</h2>
+                <div class="phishing-game-card card">
+                    <p class="game-intro">Identify the suspicious elements in the email below. Click on the email to make your choice!</p>
+                    <div class="email-scenario" id="email-scenario-1">
+                        
+                        <p class="scenario-text">
+                            <strong>From:</strong> &lt;service.update@amzon-support.com&gt;<br>
+                            <strong>Subject:</strong> Your Amazon Account Has Been Hacked - Urgent Action Required<br>
+                            <strong>Body:</strong> <br>
+                            Dear Customer,<br><br>
+                            We detected unusual activity on your account. Someone accessed your account from an unknown device. To secure your account, please verify your identity immediately by clicking the link below:<br><br>
+                            <a href="#" class="suspicious-link">VERIFY ACCOUNT NOW</a><br><br>
+                            Failure to do so will result in temporary account suspension.<br><br>
+                            Thank You,<br>
+                            Amazon Security Team
+                        </p>
+                    </div>
+                    <div class="phishing-controls">
+                        <button class="btn btn-primary" id="phishing-legitimate">This is Legitimate</button>
+                        <button class="btn btn-secondary" id="phishing-phishing">This is Phishing</button>
+                    </div>
+                    <p id="phishing-feedback" class="phishing-feedback"></p>
+                    <button class="btn btn-primary" id="next-phishing-scenario" style="display: none;">Next Scenario</button>
+                    <button class="btn btn-primary" id="retake-phishing-quiz" style="display: none;">Retake Quiz</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cyber-bingo section-spacing">
+            <div class="container">
+                <h2>Cyber Safety Bingo: How Many Can You Get?</h2>
+                <p class="game-intro">Click on the squares that represent practices you follow to enhance your online safety. Try to get a "Bingo!"</p>
+                <div class="bingo-grid" id="bingo-grid">
+                    <div class="bingo-square card" data-practice="2fa">Uses Two-Factor Authentication</div>
+                    <div class="bingo-square card" data-practice="strong-password">Uses Strong, Unique Passwords</div>
+                    <div class="bingo-square card" data-practice="data-backup">Regularly Backs Up Data</div>
+                    <div class="bingo-square card" data-practice="recognize-phishing">Can Recognize Phishing Emails</div>
+                    <div class="bingo-square card" data-practice="privacy-settings">Reviews Social Media Privacy Settings</div>
+                    <div class="bingo-square card" data-practice="software-updates">Keeps Software Updated</div>
+                    <div class="bingo-square card" data-practice="public-wifi-vpn">Uses VPN on Public Wi-Fi</div>
+                    <div class="bingo-square card" data-practice="info-sharing">Thinks Before Sharing Personal Info</div>
+                    <div class="bingo-square card" data-practice="device-lock">Locks Devices with Passcode/Biometrics</div>
+                </div>
+                <div class="bingo-results">
+                    <p id="bingo-score" class="score-text">Practices Followed: 0</p>
+                    <p id="bingo-message" class="bingo-message"></p>
+                    <button class="btn btn-primary" id="reset-bingo">Reset Bingo</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-progress section-spacing bg-light-pastel">
+            <div class="container">
+                <h2>Your Learning Journey Progress</h2>
+                <div class="progress-bar-container card">
+                    <div class="progress-bar" style="width: 75%;"></div>
+                    <span class="progress-text">Your journey towards digital safety is 75% complete!</span>
+                </div>
+                <a href="awareness_hub.html" class="btn btn-secondary mt-3">Continue Learning in the Awareness Hub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>LockX</h3>
+                    <p>"Lock Your Data. Unlock Your Safety."</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact-info">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> info@lockx.org</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210 (Helpline)</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> LockX. All rights reserved.</p>
+                <p>Created by Stephen Beulan A, Mar Gregorios College.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/interactive_zone.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

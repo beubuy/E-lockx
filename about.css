@@ -1,0 +1,422 @@
+/* --- About Page Specific Styles --- */
+/* --- Header --- */
+.main-header {
+    background-color: var(--bg-white);
+    padding: var(--spacing-sm) 0;
+    box-shadow: 0 2px 10px var(--shadow-light);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+
+.about-hero {
+    background: linear-gradient(135deg, var(--sky-blue), var(--mint-green)); /* Light gradient */
+    padding: 80px 0;
+    text-align: center;
+    color: var(--white); /* Text color for hero section */
+}
+
+.about-hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.about-hero h2 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.5em;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+    color: var(--white);
+}
+
+.hero-illustration img {
+    max-width: 600px;
+    height: auto;
+    margin-top: 30px;
+}
+
+.mission-vision {
+    padding: 80px 0;
+    background-color: var(--background-light); /* Assuming a slightly off-white background for sections */
+}
+
+.mission-vision .grid-2-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mission-vision .card {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--soft-shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.mission-vision .card:hover {
+    transform: translateY(-5px);
+}
+
+.mission-vision .card .icon-large {
+    font-size: 3em;
+    color: var(--mint-green);
+    margin-bottom: 20px;
+}
+
+.mission-vision .vision-card .icon-large {
+    color: var(--sky-blue);
+}
+
+.mission-vision h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    color: var(--charcoal-grey);
+    margin-bottom: 15px;
+}
+
+.mission-vision p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: var(--medium-grey);
+}
+
+.founder-profile {
+    padding: 80px 0;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.founder-profile h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8em;
+    color: var(--charcoal-grey);
+    margin-bottom: 50px;
+}
+
+.founder-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.founder-image {
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: var(--soft-shadow);
+}
+
+.founder-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.founder-bio p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: var(--charcoal-grey);
+    margin-bottom: 20px;
+}
+
+.founder-bio .quote {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--mint-green);
+    border-left: 4px solid var(--mint-green);
+    padding-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.founder-bio .social-links a {
+    font-size: 1.8em;
+    color: var(--charcoal-grey);
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.founder-bio .social-links a:hover {
+    color: var(--mint-green);
+}
+
+.why-it-matters {
+    padding: 80px 0;
+    background-color: var(--background-light);
+    text-align: center;
+}
+
+.why-it-matters h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8em;
+    color: var(--charcoal-grey);
+    margin-bottom: 50px;
+}
+
+.matters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.matter-item {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--soft-shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.matter-item:hover {
+    transform: translateY(-5px);
+}
+
+.matter-item .icon-medium {
+    font-size: 2.5em;
+    color: var(--blush-pink);
+    margin-bottom: 20px;
+}
+
+.matter-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    color: var(--charcoal-grey);
+    margin-bottom: 15px;
+}
+
+.matter-item p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--medium-grey);
+}
+
+.threat-timeline {
+    padding: 80px 0;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.threat-timeline h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8em;
+    color: var(--charcoal-grey);
+    margin-bottom: 60px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--mint-green);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 3px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: var(--sky-blue);
+    border: 4px solid var(--white);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item.left {
+    left: 0;
+    padding-right: 90px;
+}
+
+.timeline-item.right {
+    left: 50%;
+    padding-left: 90px;
+}
+
+.timeline-item.right::after {
+    left: -17px;
+}
+
+.timeline-content {
+    background-color: var(--background-light);
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: var(--soft-shadow);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-content h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    color: var(--charcoal-grey);
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--medium-grey);
+}
+
+.timeline-icon {
+    position: absolute;
+    bottom: 15px; /* Adjust as needed */
+    right: 15px; /* Adjust as needed */
+    width: 50px; /* Size of the icon */
+    height: auto;
+    opacity: 0.7;
+}
+
+.timeline-item.left .timeline-icon {
+    right: 15px;
+}
+
+.timeline-item.right .timeline-icon {
+    left: 15px;
+}
+
+
+.about-cta {
+    padding: 60px 0;
+    background-color: var(--blush-pink); /* Using blush pink for distinct CTA */
+    color: var(--white);
+    text-align: center;
+}
+
+.about-cta h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: var(--white);
+}
+
+/* --- Responsive Adjustments for About Page --- */
+@media (max-width: 992px) {
+    .about-hero h1 {
+        font-size: 2.8em;
+    }
+    .about-hero h2 {
+        font-size: 1.3em;
+    }
+    .mission-vision .grid-2-cols {
+        grid-template-columns: 1fr;
+    }
+    .founder-content {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+    .founder-image {
+        width: 200px;
+        height: 200px;
+    }
+    .founder-profile h2, .why-it-matters h2, .threat-timeline h2 {
+        font-size: 2.2em;
+    }
+    .timeline::after {
+        left: 31px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    .timeline-item::after {
+        left: 15px;
+    }
+    .timeline-item.right {
+        left: 0%;
+        padding-left: 70px;
+    }
+    .timeline-item.right::after {
+        left: 15px;
+    }
+    .timeline-icon {
+        width: 40px;
+        bottom: 10px;
+    }
+    .timeline-item.left .timeline-icon {
+        right: 10px;
+    }
+    .timeline-item.right .timeline-icon {
+        left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.5em;
+    }
+    .about-hero h2 {
+        font-size: 1.1em;
+    }
+    .mission-vision .card {
+        padding: 30px;
+    }
+    .founder-profile h2, .why-it-matters h2, .threat-timeline h2 {
+        font-size: 1.8em;
+    }
+    .matters-grid {
+        grid-template-columns: 1fr;
+    }
+    .threat-timeline h4 {
+        font-size: 1.3em;
+    }
+    .about-cta h3 {
+        font-size: 1.8em;
+    }
+}

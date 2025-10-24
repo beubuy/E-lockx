@@ -1,0 +1,162 @@
+/* awareness_hub.css - Specific styles for the Awareness Hub page */
+
+/* Hero Section */
+.awareness-hero {
+    background: linear-gradient(135deg, var(--mint-green-light), var(--sky-blue-light)); /* Soft pastel gradient */
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px; /* Ensure sufficient height */
+}
+
+.awareness-hero .container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.awareness-hero .hero-content {
+    flex: 2;
+    min-width: 300px; /* Minimum width before wrapping */
+    color: var(--charcoal-grey);
+}
+
+.awareness-hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.2em;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    color: var(--charcoal-grey);
+}
+
+.awareness-hero h2 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: var(--medium-grey);
+}
+
+.awareness-hero .btn-secondary {
+    background-color: var(--blush-pink);
+    color: var(--white);
+    border: 2px solid var(--blush-pink);
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.awareness-hero .btn-secondary:hover {
+    background-color: transparent;
+    color: var(--blush-pink);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.awareness-hero .hero-illustration {
+    flex: 1;
+    min-width: 250px;
+    text-align: right;
+}
+
+.awareness-hero .hero-illustration img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Subtopics Overview */
+.subtopics {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.subtopics h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5em;
+    color: var(--charcoal-grey);
+}
+
+.subtopic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.subtopic-card {
+    background-color: #F8F8F8; /* Lighter background for cards */
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--charcoal-grey);
+    box-shadow: var(--soft-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.subtopic-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.subtopic-card .icon-large {
+    font-size: 3em;
+    color: var(--mint-green);
+    margin-bottom: 15px;
+}
+
+.subtopic-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--charcoal-grey);
+}
+
+.subtopic-card p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1em;
+    color: var(--medium-grey);
+}
+
+/* Detailed Subtopic Sections */
+.topic-section {
+    padding: 80px 0;
+    border-bottom: 1px solid #eee;
+    background-color: var(--white);
+}
+
+.topic-section:nth-of-type(odd) {
+    background-color: #fcfcfc; /* Slightly different background for alternating sections */
+}
+
+.topic-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2em;
+    color: var(--charcoal-grey);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.topic-section .topic-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.topic-section .topic-content.reverse-layout {
+    flex-direction: row-reverse;
+}
+
+.topic-section .topic-text {
